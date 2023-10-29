@@ -37,3 +37,5 @@ query {
 * apollo-server is a fully-featured GraphQL server. 
 * Nexus is a library to create type-safe GraphQL schemas. Nexus ensures GraphQL types and Typescript types never go out of sync.
 * Prisma Client exposes a CRUD API for the models in your schema for you to read and write in your database.
+* Note that, the relation between User and Link is bidirectional. A user has zero or more links that they have created. Similary a single link is optionally connected to a user who posted the link. To reflect this bidirectional relation, you will add a postedBy field to the existing Link model definition in your GraphQL schema.
+
