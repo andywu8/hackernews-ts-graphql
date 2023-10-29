@@ -30,7 +30,7 @@ export const LinkQuery = extendType({
         t.nonNull.list.nonNull.field("feed", {   // 3
             type: "Link",
             resolve(parent, args, context, info) {    // 4
-                return links;
+                return context.prisma.link.findMany(); //1
             },
         });
     },
@@ -46,17 +46,14 @@ export const LinkMutation = extendType({  // 1
                 url: nonNull(stringArg()),
             },
             
-            resolve(parent, args, context) {    
-                const { description, url } = args;  // 4
-                
-                let idCount = links.length + 1;  // 5
-                const link = {
-                    id: idCount,
-                    description: description,
-                    url: url,
-                };
-                links.push(link);
-                return link;
+            resolve(parent, args, context) {   
+                const newLink = context.prisma.link.create({
+                    data: {
+                        description: args.description, 
+                        url: args.url,
+                    }
+                }) ;
+                return newLink
             },
         });
     },
