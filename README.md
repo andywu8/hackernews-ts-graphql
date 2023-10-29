@@ -18,4 +18,4 @@ https://www.howtographql.com/typescript-apollo/2-a-simple-query/
 
 # Helpful notes
 * apollo-server is a fully-featured GraphQL server. 
-* Nexus is a library to create type-safe GraphQL schemas
+* Nexus is a library to create type-safe GraphQL schemas. Nexus ensures GraphQL types and Typescript types never go out of sync.
