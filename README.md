@@ -23,7 +23,16 @@ https://www.howtographql.com/typescript-apollo/2-a-simple-query/
 * Create migration with Prism: npx prisma migrate dev --name "init"
 * query the database with prism: npx ts-node src/script.ts              
     *   Issue with typescript version --> run npm install --save-dev ts-node
+* query command:
+query {
+  feed {
+    id
+    url
+    description
+  }
+}
 
 # Helpful notes
 * apollo-server is a fully-featured GraphQL server. 
 * Nexus is a library to create type-safe GraphQL schemas. Nexus ensures GraphQL types and Typescript types never go out of sync.
+* Prisma Client exposes a CRUD API for the models in your schema for you to read and write in your database.
