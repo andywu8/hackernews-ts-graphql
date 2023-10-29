@@ -11,8 +11,10 @@ https://www.howtographql.com/typescript-apollo/2-a-simple-query/
 * touch tsconfig.json           
 * copy and paste tsconfig.json   
 * npm install apollo-server@^3.1.1 graphql@^15.5.1 nexus@^1.1.0
-mkdir src
-touch src/schema.ts src/index.ts
+* mkdir src
+* touch src/schema.ts src/index.ts
+* npm run generate (to update your schema.graphql and nexus-typegen.ts)
+* npm run dev
 
 # Helpful notes
 * apollo-server is a fully-featured GraphQL server. 
