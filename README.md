@@ -13,8 +13,10 @@ https://www.howtographql.com/typescript-apollo/2-a-simple-query/
 * npm install apollo-server@^3.1.1 graphql@^15.5.1 nexus@^1.1.0
 * npm install prisma@^3.5.0 --save-dev
 * npm install @prisma/client@^3.5.0
-* npm install bcryptjs@~2.4.0 jsonwebtoken@~8.5.0  
-* npm install --save-dev @types/bcryptjs@~2.4.0  @types/jsonwebtoken@~8.5.0
+
+* add bcryptjs and jsonwebtoken
+    * npm install bcryptjs@~2.4.0 jsonwebtoken@~8.5.0  
+    * npm install --save-dev @types/bcryptjs@~2.4.0  @types/jsonwebtoken@~8.5.0
 * mkdir src
 * touch src/schema.ts src/index.ts
 * npm run generate (to update your schema.graphql and nexus-typegen.ts)
