@@ -20,7 +20,8 @@ https://www.howtographql.com/typescript-apollo/2-a-simple-query/
 
 
 # Additional Stuff
-* Create migration with Prism: npx prisma migrate dev --name "init"
+* Create migration with Prism and update Prisma client --> after you update schema.prisma: npx prisma migrate dev --name "init"
+* npx prisma migrate dev --name "add-user-model"
 * query the database with prism: npx ts-node src/script.ts              
     *   Issue with typescript version --> run npm install --save-dev ts-node
 * query command:
