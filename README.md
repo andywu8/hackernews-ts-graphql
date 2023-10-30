@@ -37,6 +37,19 @@ query {
   }
 }
 
+mutation {
+  login(email: "alice@prisma.io", password: "graphql") {
+    token
+    user {
+      email
+      links {
+        url
+        description
+      }
+    }
+  }
+}
+
 # Helpful notes
 * apollo-server is a fully-featured GraphQL server. 
 * Nexus is a library to create type-safe GraphQL schemas. Nexus ensures GraphQL types and Typescript types never go out of sync.
